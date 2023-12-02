@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore All</title>
+    <!-- main styles file -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/Ui.css" />
+    <link rel="stylesheet" href="./styles/cards.css" />
+    <link rel="stylesheet" href="./styles/compPrice.css" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="section sec1 header active-sec" id="home">
+      <div class="header page1" id="header">
+        <div class="Nav-Links">
+          <ul class="black-nav">
+            <div class="left">
+              <div class="info">
+                <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+                <a href="../home.html">
+                  <li>Home</li>
+                </a>
+              </div>
+              <div class="info">
+                <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+                <a href="../sections.html">
+                  <li>Sections</li>
+                </a>
+              </div>
+              <div class="info">
+                <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+                <li>lorem5</li>
+              </div>
+              <div class="info">
+                <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+                <li>lorem5</li>
+              </div>
+              <div class="info">
+                <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+                <li>lorem5</li>
+              </div>
+            </div>
+            <div class="right">
+              <a href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="../login.html">
+                <span class="login">Login</span>
+              </a>
+              <a href="../signUp.html">
+                <span class="sign-up">Sign Up</span>
+              </a>
+              <i class="fa-solid fa-bars burger"></i>
+            </div>
+          </ul>
+
+          <ul class="white-nav">
+            <!-- class="control" data-id="contact" -->
+            <a href="#landMark">
+              <li>Main</li>
+            </a>
+            <li>
+              <a href="#Good">Good To Know</a>
+            </li>
+            <a href="#Gallery">
+              <li>Gallery</li>
+            </a>
+            <a href="#cards">
+              <li>cards</li>
+            </a>
+            <a href="#Reviews">
+              <li>Reviews & Comments</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="landing">
+        <h1 class="title">Navigate Throw Website</h1>
+      </div>
+    </header>
+    <main>
+      <section class="section sec2 LandMarks" id="LandMarks">
+        <div class="main-title">
+          <h2>
+            <span>LandMarks</span
+            ><span class="bg-text">Explore All LandMarks</span>
+          </h2>
+        </div>
+        <div class="containerSearch">
+          <div class="filters">
+            <div class="wrapper select1 selectDrop">
+              <div class="select-btn">
+                <span>Select City</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input
+                    class="inp"
+                    spellcheck="false"
+                    type="text"
+                    placeholder="Search"
+                  />
+                </div>
+                <ul class="options"></ul>
+              </div>
+            </div>
+
+            <div class="wrapper priceRange">
+              <div class="headerPriceRange">
+                <h2>Price Range</h2>
+                <p>Use slider or enter min and max price</p>
+              </div>
+              <div class="price-input">
+                <div class="field">
+                  <span>Min</span>
+                  <input type="number" class="input-min" value="2500" />
+                </div>
+                <div class="separator">-</div>
+                <div class="field">
+                  <span>Max</span>
+                  <input type="number" class="input-max" value="7500" />
+                </div>
+              </div>
+              <div class="slider">
+                <div class="progress"></div>
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="range-min"
+                  min="0"
+                  max="10000"
+                  value="2500"
+                  step="100"
+                />
+                <input
+                  type="range"
+                  class="range-max"
+                  min="0"
+                  max="10000"
+                  value="7500"
+                  step="100"
+                />
+              </div>
+            </div>
+            <div class="wrapper select2 selectDrop">
+              <div class="select-btn">
+                <span>Select Tourism Type</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input spellcheck="false" type="text" placeholder="Search" />
+                </div>
+                <ul class="options"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__container">
+            <article class="card__article">
+              <img src="./images/image1.jpg" alt="image" class="card__img" />
+
+              <div class="card__data">
+                <span class="card__description"
+                  >Vancouver Mountains, Canada</span
+                >
+                <h2 class="card__title">The Great Path</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+
+            <article class="card__article">
+              <img src="./images/image2.jpg" alt="image" class="card__img" />
+
+              <div class="card__data">
+                <span class="card__description">Poon Hill, Nepal</span>
+                <h2 class="card__title">Starry Night</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+
+            <article class="card__article">
+              <img src="./images/image3.jpg" alt="image" class="card__img" />
+
+              <div class="card__data">
+                <span class="card__description">Bojcin Forest, Serbia</span>
+                <h2 class="card__title">Path Of Peace</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section sec3 portfolio" id="Hotels">
+        <div class="main-title">
+          <h2>
+            <span>Hotels</span><span class="bg-text">Explore All Hotels</span>
+          </h2>
+        </div>
+        <div class="containerSearch">
+          <div class="filters">
+            <div class="wrapper select1 selectDrop">
+              <div class="select-btn">
+                <span>Select City</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input
+                    class="inp"
+                    spellcheck="false"
+                    type="text"
+                    placeholder="Search"
+                  />
+                </div>
+                <ul class="options"></ul>
+              </div>
+            </div>
+
+            <div class="wrapper priceRange">
+              <div class="headerPriceRange">
+                <h2>Price Range</h2>
+                <p>Use slider or enter min and max price</p>
+              </div>
+              <div class="price-input">
+                <div class="field">
+                  <span>Min</span>
+                  <input type="number" class="input-min" value="2500" />
+                </div>
+                <div class="separator">-</div>
+                <div class="field">
+                  <span>Max</span>
+                  <input type="number" class="input-max" value="7500" />
+                </div>
+              </div>
+              <div class="slider">
+                <div class="progress"></div>
+              </div>
+              <div class="range-input">
+                <input
+                  type="range"
+                  class="range-min"
+                  min="0"
+                  max="10000"
+                  value="2500"
+                  step="100"
+                />
+                <input
+                  type="range"
+                  class="range-max"
+                  min="0"
+                  max="10000"
+                  value="7500"
+                  step="100"
+                />
+              </div>
+            </div>
+            <div class="wrapper select2 selectDrop">
+              <div class="select-btn">
+                <span>Select Tourism Type</span>
+                <i class="uil uil-angle-down"></i>
+              </div>
+              <div class="content">
+                <div class="search">
+                  <i class="uil uil-search"></i>
+                  <input spellcheck="false" type="text" placeholder="Search" />
+                </div>
+                <ul class="options"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__container">
+            <article class="card__article">
+              <img src="./images/image1.jpg" alt="image" class="card__img" />
+
+              <div class="card__data">
+                <span class="card__description"
+                  >Vancouver Mountains, Canada</span
+                >
+                <h2 class="card__title">The Great Path</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+
+            <article class="card__article">
+              <img src="./images/image2.jpg" alt="image" class="card__img" />
+
+              <div class="card__data">
+                <span class="card__description">Poon Hill, Nepal</span>
+                <h2 class="card__title">Starry Night</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+
+            <article class="card__article">
+              <img src="./images/image3.jpg" alt="image" class="card__img" />
+
+              <div class="card__data">
+                <span class="card__description">Bojcin Forest, Serbia</span>
+                <h2 class="card__title">Path Of Peace</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section sec4 blogs" id="blogs"></section>
+      <section class="section sec5 contact" id="contact"></section>
+      <section class="section sec6 contact2" id="final"></section>
+      <!-- <section class="section sec6 about"></section> -->
+    </main>
+
+    <div class="controls">
+      <div class="control active-btn" data-id="home" data-content="Home">
+        <i class="fas fa-home"></i>
+      </div>
+
+      <div class="control" data-id="LandMarks" data-content="LandMarks">
+        <i class="fa-solid fa-landmark"></i>
+      </div>
+
+      <div class="control" data-id="Hotels" data-content="Hotels">
+        <i class="fa-solid fa-bed"></i>
+      </div>
+
+      <div class="control" data-id="restaurants" data-content="Restaurants">
+        <i class="fa-solid fa-utensils"></i>
+      </div>
+      <div class="control" data-id="Activities" data-content="Activities">
+        <i class="fa-solid fa-person-running"></i>
+      </div>
+      <div class="control" data-id="final">
+        <i class="fa-solid fa-comments"></i>
+      </div>
+    </div>
+    <div class="theme-btn">
+      <i class="fas fa-adjust"></i>
+    </div>
+    <footer class="page1">
+      <div class="container2">
+        <div class="roam">
+          <p class="title">Lorem</p>
+          <p class="details">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
+            expedita similique eaque aut reprehenderit maxime aliquam ipsum iure
+            quisquam error?
+          </p>
+          <div class="another">
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+          </div>
+        </div>
+        <div class="links">
+          <p class="title">links</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <a href="#header">Go Up</a>
+        </div>
+        <div class="insta">
+          <p class="title">Instagram Gallery</p>
+          <div class="images">
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/17/12/dahlia-8345816_1280.jpg"
+              alt="insta 1"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/28/04/34/balkan-gemsroot-8346513_640.jpg"
+              alt="insta 2"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/16/10/51/fox-8318961_1280.png"
+              alt="insta 3"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/06/33/bird-8344154_640.jpg"
+              alt="insta 4"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/28/23/41/leaves-8348467_640.jpg"
+              alt="insta 5"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/26/10/51/shetland-sheepdog-8342397_640.jpg"
+              alt="insta 6"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/04/32/animals-8344009_1280.jpg"
+              alt="insta 7"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/04/30/animals-8344004_1280.jpg"
+              alt="insta 8"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/04/31/animals-8344006_640.jpg"
+              alt="insta 9"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./scripts/comps.js"></script>
+    <script src="./scripts/os.js"></script>
+  </body>
+</html>
