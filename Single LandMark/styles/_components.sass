@@ -1,0 +1,156 @@
+
+@use "./_variables" as *
+.main-title
+  margin-top: 30px
+  text-align: center
+  h2
+    position: relative
+    text-transform: uppercase
+    font-size: 4rem
+    font-weight: 700
+    span
+      color: var(--color-secondary)
+    .bg-text
+      position: absolute
+      top: 50%
+      left: 50%
+      color: var(--color-grey-5)
+      transition: all .4s ease-in-out
+      z-index: -1
+      transform: translate(-50%, -50%)
+      font-weight: 800
+      font-size: 6.3rem
+
+// Practice On If And Else If And Else
+
+$direction: "left"
+
+.arrow-div
+  // @extend %main-box
+  font-size: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 300px
+  height: 300px
+  position: relative
+  margin: 50px auto
+  &::before
+    content: ""
+    position: absolute
+    border: 10px solid transparent
+    @if $direction == "top"
+      top: -20px
+      left: 50%
+      transform: translateX(-50%)
+      border-bottom-color: red
+    @else if $direction == "right"
+      right: -20px
+      top: 50%
+      transform: translateY(-50%)
+      border-left-color: red
+    @else if $direction == "bottom"
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+      border-top-color: red
+    @else if $direction == "left"
+      left: -20px
+      top: 50%
+      transform: translateY(-50%)
+      border-right-color: red
+    // @else
+      // @error "This Direction #{$direction} Is Not Valid"
+
+// @mixin makeArrow($direction, $width,$content)
+//   &::before
+//     content: ""
+//     position: absolute
+//     border: $width solid transparent
+//   @if $direction == "top"
+//     top: -20px
+//     left: 50%
+//     transform: translateX(-50%)
+//     border-bottom-color: red
+//   @else if $direction == "right"
+//     right: -20px
+//     top: 50%
+//     transform: translateY(-50%)
+//     border-left-color: red
+//     @else if $direction == "bottom"
+//       bottom: -20px
+//       left: 50%
+//       transform: translateX(-50%)
+//       border-top-color: red
+//     @else if $direction == "left"
+//       left: -20px
+//       top: 50%
+//       transform: translateY(-50%)
+//       border-right-color: red
+
+@mixin tooltip($direction, $width, $content)
+  position: relative
+  display: inline-block
+
+  &:hover
+    &::before
+      content: ''
+      position: absolute
+      z-index: 1
+      width: 0
+      height: 0
+      border-style: solid
+
+      @if $direction == 'top'
+        bottom: calc(100% + 10px)
+        border-width: 8px 8px 0 8px
+        border-color: transparent transparent transparent transparent
+      @else if $direction == 'bottom'
+        top: calc(100% + 10px)
+        border-width: 0 8px 8px 8px
+        border-color: transparent transparent transparent transparent
+      @else if $direction == 'left'
+        right: calc(100% + 10px)
+        border-width: 8px 0 8px 8px
+        border-color: transparent transparent transparent var(--color-grey-2)
+      @else if $direction == 'right'
+        left: calc(100% + 10px)
+        border-width: 8px 8px 8px 0
+        border-color: transparent #000 transparent transparent
+
+    &::after
+      content: attr(data-content)
+      position: absolute
+      z-index: 2
+      // background-color: #000
+      // color: #fff
+      color: #3c3a3a
+      // color: var(--color-grey-7)
+      background-color: var(--color-white)
+      background-color: white
+
+      padding: 8px
+      border-radius: 4px
+      // width: $width
+      width: auto
+      text-align: center
+
+      @if $direction == 'top'
+        bottom: calc(100% + 20px)
+        left: 50%
+        transform: translateX(-50%)
+      @else if $direction == 'bottom'
+        top: calc(100% + 20px)
+        left: 50%
+        transform: translateX(-50%)
+      @else if $direction == 'left'
+        top: 50%
+        right: calc(100% + 20px)
+        transform: translateY(-50%)
+      @else if $direction == 'right'
+        top: 50%
+        left: calc(100% + 20px)
+        transform: translateY(-50%)
+
+  &[data-tooltip]:hover::after
+    content: attr(data-tooltip)

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header And Footer</title>
+    <style>
+      .header {
+        width: 100%;
+        height: auto;
+      }
+      .header .Nav-Links {
+        display: flex;
+        justify-content: space-around;
+        align-content: flex-start;
+        flex-direction: column;
+        list-style: none;
+        width: 100%;
+      }
+      .header .Nav-Links .black-nav {
+        padding: 15px 30px;
+        background-color: var(--color-primary);
+        display: flex;
+        justify-content: space-between;
+      }
+      .header .Nav-Links .black-nav .left,
+      .header .Nav-Links .black-nav .right,
+      .header .Nav-Links .black-nav .info {
+        display: inline-block;
+      }
+      .header .Nav-Links .black-nav .left .left,
+      .header .Nav-Links .black-nav .right .left,
+      .header .Nav-Links .black-nav .info .left {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 10px;
+      }
+      .header .Nav-Links .black-nav .left .info,
+      .header .Nav-Links .black-nav .right .info,
+      .header .Nav-Links .black-nav .info .info {
+        padding: 0px 15px;
+      }
+      .header .Nav-Links .black-nav .left .info li,
+      .header .Nav-Links .black-nav .right .info li,
+      .header .Nav-Links .black-nav .info .info li {
+        display: inline;
+        padding: 5px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--color-grey-7);
+      }
+      .header .Nav-Links .black-nav .left .info i,
+      .header .Nav-Links .black-nav .right .info i,
+      .header .Nav-Links .black-nav .info .info i {
+        margin-right: -5px;
+      }
+      .header .Nav-Links .black-nav .right span {
+        color: var(--color-grey-7);
+      }
+      .header .Nav-Links .black-nav .right span,
+      .header .Nav-Links .black-nav .right i {
+        color: white;
+        color: var(--color-grey-7);
+        transition: 0.3s;
+      }
+      .header .Nav-Links .black-nav .right span {
+        padding: 0 10px;
+      }
+      .header .Nav-Links .black-nav .right span:hover {
+        color: var(--color-secondary);
+        cursor: pointer;
+      }
+      .header .Nav-Links .black-nav .right i {
+        padding: 0 5px;
+      }
+      .header .Nav-Links .black-nav .right i:hover {
+        color: var(--color-secondary);
+        cursor: pointer;
+      }
+      .header .Nav-Links .white-nav {
+        background-color: var(--color-grey-2);
+        width: 100%;
+        padding: 0 30px 0px;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+        border-bottom: 1px solid var(--color-black);
+      }
+      .header .Nav-Links .white-nav li,
+      .header .Nav-Links .white-nav a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.5rem;
+        padding: 15px;
+        text-transform: capitalize;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        text-align: center;
+        border-right: 1px solid rgba(36, 35, 35, 0.1215686275);
+        transition: 0.5s ease-in-out;
+        color: black;
+      }
+      .header .Nav-Links .white-nav li:last-child,
+      .header .Nav-Links .white-nav a:last-child {
+        border: none;
+      }
+      .header .Nav-Links .white-nav li:hover,
+      .header .Nav-Links .white-nav a:hover {
+        color: var(--color-secondary);
+        cursor: pointer;
+      }
+      .header .Nav-Links .white-nav li:hover li,
+      .header .Nav-Links .white-nav a:hover li {
+        color: var(--color-secondary);
+        cursor: pointer;
+      }
+
+      .container2 {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .container2 .details {
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+      .container2 .images {
+        padding-left: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-gap: 10px;
+      }
+      .container2 .images img {
+        width: 100px;
+        height: 100px;
+        transition: transform 0.3s, filter 0.3s;
+      }
+      .container2 .images img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        filter: brightness(0.7);
+      }
+      .container2 p:not(.title) {
+        color: #c8c2bf;
+        max-width: 300px;
+        max-height: 300px;
+        overflow: hidden;
+        padding-left: 40px;
+      }
+      .container2 .links p:not(.title),
+      .container2 .roam p:not(.title):not(.details) {
+        transition: 0.3s;
+        font-size: 1.1rem;
+      }
+      .container2 .links p:not(.title):hover,
+      .container2 .roam p:not(.title):not(.details):hover {
+        transform: translate(20px);
+        cursor: pointer;
+        color: #ff681a;
+      }
+
+      footer {
+        background-color: #2e2e2e;
+      }
+      footer a {
+        text-decoration: none;
+        color: #c8c2bf;
+        transition: 0.5s;
+      }
+      footer a:hover {
+        color: var(--color-secondary);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header page1" id="header">
+      <div class="Nav-Links">
+        <ul class="black-nav">
+          <div class="left">
+            <div class="info">
+              <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+              <a href="../home.html">
+                <li>Home</li>
+              </a>
+            </div>
+            <div class="info">
+              <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+              <a href="../sections.html">
+                <li>Sections</li>
+              </a>
+            </div>
+            <div class="info">
+              <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+              <li>lorem5</li>
+            </div>
+            <div class="info">
+              <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+              <li>lorem5</li>
+            </div>
+            <div class="info">
+              <i class="fa-solid fa-folder-open" style="color: #ff671b"></i>
+              <li>lorem5</li>
+            </div>
+          </div>
+          <div class="right">
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="../login.html">
+              <span class="login">Login</span>
+            </a>
+            <a href="../signUp.html">
+              <span class="sign-up">Sign Up</span>
+            </a>
+            <i class="fa-solid fa-bars burger"></i>
+          </div>
+        </ul>
+
+        <ul class="white-nav">
+          <!-- class="control" data-id="contact" -->
+          <a href="#landMark">
+            <li>Main</li>
+          </a>
+          <li>
+            <a href="#Good">Good To Know</a>
+          </li>
+          <a href="#Gallery">
+            <li>Gallery</li>
+          </a>
+          <a href="#cards">
+            <li>cards</li>
+          </a>
+          <a href="#Reviews">
+            <li>Reviews & Comments</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="page1">
+      <div class="container2">
+        <div class="roam">
+          <p class="title">Lorem</p>
+          <p class="details">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto
+            expedita similique eaque aut reprehenderit maxime aliquam ipsum iure
+            quisquam error?
+          </p>
+          <div class="another">
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+            <p>Lorem ipsum dolor sit.</p>
+          </div>
+        </div>
+        <div class="links">
+          <p class="title">links</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <a href="#header">Go Up</a>
+        </div>
+        <div class="insta">
+          <p class="title">Instagram Gallery</p>
+          <div class="images">
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/17/12/dahlia-8345816_1280.jpg"
+              alt="insta 1"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/28/04/34/balkan-gemsroot-8346513_640.jpg"
+              alt="insta 2"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/16/10/51/fox-8318961_1280.png"
+              alt="insta 3"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/06/33/bird-8344154_640.jpg"
+              alt="insta 4"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/28/23/41/leaves-8348467_640.jpg"
+              alt="insta 5"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/26/10/51/shetland-sheepdog-8342397_640.jpg"
+              alt="insta 6"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/04/32/animals-8344009_1280.jpg"
+              alt="insta 7"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/04/30/animals-8344004_1280.jpg"
+              alt="insta 8"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2023/10/27/04/31/animals-8344006_640.jpg"
+              alt="insta 9"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
