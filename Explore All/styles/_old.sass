@@ -1,0 +1,123 @@
+@use "./_variables" as *
+
+.Good-To-Know
+  margin-top: 150px
+  .info
+    border-top: 1px solid #e1e1e1
+    padding: 20px
+    transition: 0.3s
+    &:hover
+      background-color: #f9f9f9
+    .Info-Title
+      text-transform: capitalize
+      font-weight: bold
+      font-size: 1.2rem
+      margin-right: 50px
+    .info-text
+      padding: 10px
+      background-color: #f8f8f8
+      border-radius: 20px
+
+.Gallery
+  margin-top: 150px
+  .Gallery-Des
+    margin-top: -20px
+    margin-bottom: 30px
+    color: #595959
+    text-transform: capitalize
+  .Images
+    padding: 20px
+    display: grid
+    grid-template-columns: repeat(4,1fr)
+    grid-template-rows: repeat(3, 1fr)
+    gap: 20px
+    img
+      width: 300px
+      height: 300px
+
+.cards
+  // margin-top: 50px
+  margin-top: 150px
+  margin-bottom: 50px
+  // display: grid
+  // grid-template-columns: repeat(3,1fr)
+  margin-left: 10px
+  display: flex
+  justify-content: space-between
+  .card
+    width: 260px
+    // margin: 10px
+    .imageLand
+      // background-color: white
+
+      img
+        box-shadow: -4px -1px 10px 5px rgba(0,0,0,0.51)
+        height: 250px
+        width: 250px
+        border-radius: 12px
+        margin-bottom: 5px
+    .down
+      box-shadow: 27px -16px 51px -40px rgba(0,0,0,0.61) inset
+      padding: 10px
+      background-color: #EEE6DB
+      border-radius: 12px
+      width: 250px
+    .landName
+      .landNameCard
+        font-family: 'Nova Script', sans-serif
+        font-size: 20px
+        margin-right: 10px
+      .love
+        transition: 0.5s
+        &:hover
+          transform: scale(1.1)
+          cursor: pointer
+    .stars
+      i
+        color: #FFC700
+        font-size: 25px
+
+#Reviews
+  margin-top: 150px
+  margin-bottom: 50px
+  // background-color: #F2F1EC
+  .section-title
+    text-align: center
+
+  .container
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    .card
+      width: 300px
+      padding: 10px
+      // background-color: white
+      background-color: var(--color-grey-5)
+
+      .name
+        position: relative
+        .likeReview
+          position: absolute
+          text-align: right
+          right: 0
+          transform: translateX(-10px)
+          transition: 0.5s
+          font-weight: bold
+          &:hover
+            transform: scale(1.05)
+            cursor: pointer
+      .RevTitle
+        font-style: italic
+        font-weight: bold
+        text-align: center
+        text-transform: capitalize
+        // padding-left: 10px
+        // i
+      .body
+        margin-top: 5px
+        margin-bottom: 45px
+        font-family: PT Sans
+        font-size: 16px
+        line-height: 1.5
+      .visit,.written
+        font-family: PT Sans
+        text-transform: capitalize
